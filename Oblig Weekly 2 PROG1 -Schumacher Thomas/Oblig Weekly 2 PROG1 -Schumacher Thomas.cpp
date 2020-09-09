@@ -1,6 +1,9 @@
 #include <iostream>
 #include <string>
 #include <cstdlib>
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 void task1();
 void task2();
@@ -90,7 +93,7 @@ void task1() {
 
 	std::cout << "\n \n";
 
-	for (int j = 0; j <= 100; j++) {
+	for (int j = 1; j <= 100; j++) {
 		std::cout << j << std::endl;
 	}
 }
@@ -137,7 +140,7 @@ void task4() {
 //Make a program that writes 5 to 50 in steps of 5. Use ..while.(should print 5 10 15 20 25, etc.)
 void task5() {
 
-	std::cout << "This task is the same as 4";
+	std::cout << "This task is the same as 4 \n";
 		task4();
 
 }
@@ -193,7 +196,8 @@ void taskredacted() {
 		std::cout << "Enter a random number from 1-10 and I will guess it: ";
 		std::cin >> toguess;
 
-		guess = rand() % 10 + 1; //always starts with the same number will fix
+		srand(time(NULL)); //got this solution from: cplusplus.com/reference/cstdlib/srand/
+		guess = rand() % 10 + 1;
 
 		std::cout << "I guess your number is " << guess << std::endl;
 

@@ -116,12 +116,12 @@ void task3() {
 
 	int count = 0;
 
-	do {
+	while (count < 50){
 		count = count + 5;
 			std::cout << count << std::endl;
 
 
-	} while (count < 50);
+	}
 
 }
 
@@ -140,9 +140,14 @@ void task4() {
 //Make a program that writes 5 to 50 in steps of 5. Use ..while.(should print 5 10 15 20 25, etc.)
 void task5() {
 
-	std::cout << "This task is the same as 4 \n";
-		task4();
+	int count = 0;
 
+	do {
+		count = count + 5;
+		std::cout << count << std::endl;
+
+
+	} while (count < 50);
 }
 
 
